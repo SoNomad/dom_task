@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Super App</title>
+</head>
+
+<body>
+  <script>
+    const loremDiv = document.createElement('div')
+    loremDiv.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi rerum iusto, necessitatibus expedita totam repellat nemo '
+
+    const nav = document.createElement('div')
+    const div_nav = document.createElement('div')
+    const container = document.createElement('div')
+
+    container.append(div_nav)
+    div_nav.append(nav)
+    div_nav.prepend(loremDiv)
+      
+    nav.insertAdjacentHTML('afterbegin', '<a href=# target="_blank">intocode</a>')
+    nav.insertAdjacentHTML('afterbegin', '<a href=# target="_blank">google</a>')
+    nav.insertAdjacentHTML('afterbegin', '<a href=# target="_blank">instagram</a>')
+
+    
+    div_nav.style.width = '20em'
+    loremDiv.style.border = '1px solid orange'
+    loremDiv.style.borderRadius = '15px'
+    loremDiv.style.padding = '3%'
+    loremDiv.style.marginBottom = '5%'
+    nav.style.display = 'flex'
+    nav.style.justifyContent = 'space-around'
+    container.style.display = 'flex'
+    container.style.justifyContent = 'center'
+    
+    document.body.append(container);
+  </script>
+</body>
+
+</html>
